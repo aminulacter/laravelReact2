@@ -6199,6 +6199,44 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/components/Burger/BuildControls/BuildControl/BuildControl.css":
+/*!*******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/components/Burger/BuildControls/BuildControl/BuildControl.css ***!
+  \*******************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".BuildControl {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    margin: 5px 0;\n}\n\n.BuildControl button {\n    display: block;\n    font: inherit;\n    padding: 5px;\n    margin: 0 5px;\n    width: 80px;\n    border: 1px solid #aa6817;\n    cursor: pointer;\n    outline: none;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/components/Burger/BuildControls/BuildControls.css":
+/*!*******************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/components/Burger/BuildControls/BuildControls.css ***!
+  \*******************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".BuildControl {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    margin: 5px 0;\n}\n\n.BuildControl button {\n    display: block;\n    font: inherit;\n    padding: 5px;\n    margin: 0 5px;\n    width: 80px;\n    border: 1px solid #aa6817;\n    cursor: pointer;\n    outline: none;\n}\n\n.BuildControl button:disabled {\n    background-color: #ac9980;\n    border: 1px solid #7e7365;\n    color: #ccc;\n    cursor: default;\n}\n\n.BuildControl button:hover:disabled {\n    background-color: #ac9980;\n    color: #ccc;\n    cursor: not-allowed;\n}\n\n.Label {\n    padding: 10px;\n    font-weight: bold;\n    width: 80px;\n}\n\n.BuildControl .Less {\n    background-color: #d39952;\n    color: white;\n}\n\n.BuildControl .More {\n    background-color: #8f5e1e;\n    color: white;\n}\n\n.BuildControl .Less:hover,\n.BuildControl .Less:active {\n    background-color: #daa972;\n    color: white;\n}\n\n.BuildControl .More:hover,\n.BuildControl .More:active {\n    background-color: #99703f;\n    color: white;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/components/Burger/Burger.css":
 /*!**********************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/components/Burger/Burger.css ***!
@@ -62925,6 +62963,144 @@ var Aux = function Aux(props) {
 
 /***/ }),
 
+/***/ "./resources/js/components/components/Burger/BuildControls/BuildControl/BuildControl.css":
+/*!***********************************************************************************************!*\
+  !*** ./resources/js/components/components/Burger/BuildControls/BuildControl/BuildControl.css ***!
+  \***********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../../../node_modules/css-loader??ref--6-1!../../../../../../../node_modules/postcss-loader/src??ref--6-2!./BuildControl.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/components/Burger/BuildControls/BuildControl/BuildControl.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/components/Burger/BuildControls/BuildControl/BuildControl.js":
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/components/components/Burger/BuildControls/BuildControl/BuildControl.js ***!
+  \**********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _BuildControl_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BuildControl.css */ "./resources/js/components/components/Burger/BuildControls/BuildControl/BuildControl.css");
+/* harmony import */ var _BuildControl_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_BuildControl_css__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var BuildControl = function BuildControl(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "BuildControl"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "Label"
+  }, props.label), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "Less"
+  }, "Less"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "More"
+  }, "More"));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (BuildControl);
+
+/***/ }),
+
+/***/ "./resources/js/components/components/Burger/BuildControls/BuildControls.css":
+/*!***********************************************************************************!*\
+  !*** ./resources/js/components/components/Burger/BuildControls/BuildControls.css ***!
+  \***********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../../node_modules/css-loader??ref--6-1!../../../../../../node_modules/postcss-loader/src??ref--6-2!./BuildControls.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/components/Burger/BuildControls/BuildControls.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/components/Burger/BuildControls/BuildControls.js":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/components/components/Burger/BuildControls/BuildControls.js ***!
+  \**********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _BuildControls_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BuildControls.css */ "./resources/js/components/components/Burger/BuildControls/BuildControls.css");
+/* harmony import */ var _BuildControls_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_BuildControls_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _BuildControl_BuildControl__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./BuildControl/BuildControl */ "./resources/js/components/components/Burger/BuildControls/BuildControl/BuildControl.js");
+
+
+
+var controls = [{
+  label: "Salad",
+  type: "salad"
+}, {
+  label: "Bacon",
+  type: "bacon"
+}, {
+  label: "Cheese",
+  type: "cheese"
+}, {
+  label: "Meat",
+  type: "meat"
+}];
+
+var BuildControls = function BuildControls(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "BuildControls"
+  }, controls.map(function (ctrl) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_BuildControl_BuildControl__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      key: ctrl.label,
+      label: ctrl.label
+    });
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (BuildControls);
+
+/***/ }),
+
 /***/ "./resources/js/components/components/Burger/Burger.css":
 /*!**************************************************************!*\
   !*** ./resources/js/components/components/Burger/Burger.css ***!
@@ -63228,6 +63404,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Hoc_Aux1__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Hoc/Aux1 */ "./resources/js/components/Hoc/Aux1.js");
 /* harmony import */ var _components_Burger_Burger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/Burger/Burger */ "./resources/js/components/components/Burger/Burger.js");
+/* harmony import */ var _components_Burger_BuildControls_BuildControls__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/Burger/BuildControls/BuildControls */ "./resources/js/components/components/Burger/BuildControls/BuildControls.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -63245,6 +63422,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -63277,7 +63455,7 @@ function (_Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Hoc_Aux1__WEBPACK_IMPORTED_MODULE_1__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Burger_Burger__WEBPACK_IMPORTED_MODULE_2__["default"], {
         ingredients: this.state.ingredients
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Build Controls"));
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Burger_BuildControls_BuildControls__WEBPACK_IMPORTED_MODULE_3__["default"], null));
     }
   }]);
 
