@@ -63017,7 +63017,8 @@ var BuildControl = function BuildControl(props) {
   }, props.label), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "Less"
   }, "Less"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "More"
+    className: "More",
+    onClick: props.added
   }, "More"));
 };
 
@@ -63092,7 +63093,10 @@ var BuildControls = function BuildControls(props) {
   }, controls.map(function (ctrl) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_BuildControl_BuildControl__WEBPACK_IMPORTED_MODULE_2__["default"], {
       key: ctrl.label,
-      label: ctrl.label
+      label: ctrl.label,
+      added: function added() {
+        return props.ingredientAdded(ctrl.type);
+      }
     });
   }));
 };
@@ -63407,6 +63411,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Burger_BuildControls_BuildControls__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/Burger/BuildControls/BuildControls */ "./resources/js/components/components/Burger/BuildControls/BuildControls.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -63415,18 +63421,26 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
 
+
+var INGREDIENT_PRICES = {
+  salad: 0.5,
+  bacon: 0.7,
+  cheese: 0.4,
+  meat: 1.3
+};
 
 var BurgerBuilder =
 /*#__PURE__*/
@@ -63439,13 +63453,34 @@ function (_Component) {
     _classCallCheck(this, BurgerBuilder);
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(BurgerBuilder).call(this, props));
+
+    _defineProperty(_assertThisInitialized(_this), "addIngredientHandler", function (type) {
+      var oldCount = _this.state.ingredients[type];
+      var updatedCount = oldCount + 1;
+
+      var updatedIngredients = _objectSpread({}, _this.state.ingredients);
+
+      updatedIngredients[type] = updatedCount;
+      var priceAddition = INGREDIENT_PRICES[type];
+      var oldPrice = _this.state.totalPrice;
+      var newPrice = oldPrice + priceAddition;
+
+      _this.setState({
+        totalPrice: newPrice,
+        ingredients: updatedIngredients
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "removeIngredientHandler", function (type) {});
+
     _this.state = {
       ingredients: {
         salad: 0,
         bacon: 0,
         cheese: 0,
         meat: 0
-      }
+      },
+      totalPrice: 4
     };
     return _this;
   }
@@ -63455,7 +63490,9 @@ function (_Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Hoc_Aux1__WEBPACK_IMPORTED_MODULE_1__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Burger_Burger__WEBPACK_IMPORTED_MODULE_2__["default"], {
         ingredients: this.state.ingredients
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Burger_BuildControls_BuildControls__WEBPACK_IMPORTED_MODULE_3__["default"], null));
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Burger_BuildControls_BuildControls__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        ingredientAdded: this.addIngredientHandler
+      }));
     }
   }]);
 
