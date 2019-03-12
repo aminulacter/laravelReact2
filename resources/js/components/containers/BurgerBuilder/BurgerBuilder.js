@@ -21,7 +21,8 @@ class BurgerBuilder extends Component {
                 cheese: 0,
                 meat: 0
             },
-            totalPrice: 4
+            totalPrice: 4,
+            purchaseable: false
         };
     }
 
@@ -39,13 +40,52 @@ class BurgerBuilder extends Component {
             totalPrice: newPrice,
             ingredients: updatedIngredients
         });
+        this.updatePurchaseState(updatedIngredients);
     };
-    removeIngredientHandler = type => {};
+    removedIngredientHandler = type => {
+        let oldCount = this.state.ingredients[type];
+
+        if (oldCount <= 0) {
+            return;
+        }
+        let updatedCount = oldCount - 1;
+        let updatedIngredients = {
+            ...this.state.ingredients
+        };
+        updatedIngredients[type] = updatedCount;
+        const priceDeduction = INGREDIENT_PRICES[type];
+        const oldPrice = this.state.totalPrice;
+        let newPrice = oldPrice - priceDeduction;
+        this.setState({
+            totalPrice: newPrice,
+            ingredients: updatedIngredients
+        });
+        this.updatePurchaseState(updatedIngredients);
+    };
+    updatePurchaseState = updatedIngredients => {
+        const sum = Object.keys(updatedIngredients)
+            .map(igKey => updatedIngredients[igKey])
+            .reduce((sum, el) => sum + el, 0);
+        console.log(sum);
+        this.setState({ purchaseable: sum > 0 });
+    };
     render() {
+        const disabledInfo = {
+            ...this.state.ingredients
+        };
+        for (let key in disabledInfo) {
+            disabledInfo[key] = disabledInfo[key] <= 0;
+        }
         return (
             <Aux>
                 <Burger ingredients={this.state.ingredients} />
-                <BuildControls ingredientAdded={this.addIngredientHandler} />
+                <BuildControls
+                    ingredientAdded={this.addIngredientHandler}
+                    ingredientRemoved={this.removedIngredientHandler}
+                    disabled={disabledInfo}
+                    purchaseable={this.state.purchaseable}
+                    price={this.state.totalPrice}
+                />
             </Aux>
         );
     }
