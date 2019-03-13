@@ -6325,7 +6325,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../../node_mod
 
 
 // module
-exports.push([module.i, "  .NavigationItem{\r\n      margin: 0;\r\n      box-sizing: border-box;\r\n      display: flex;\r\n      height: 100%;\r\n      align-items: center;\r\n }\r\n\r\n\r\n .NavigationItem a{\r\n     color: white;\r\n     text-decoration: none;\r\n     height: 100%;\r\n     padding:  16px 10px;\r\n     border-bottom: 4px solid transparent;\r\n     box-sizing: border-box;\r\n     display: block;\r\n }\r\n\r\n\r\n .NavigationItem a:hover,\r\n .NavigationItem a:active\r\n .NavigationItem a.active\r\n {\r\n    background-color: #8f5c2c;\r\n    border-bottom: 4px solid #40a4c8;\r\n    color: white;\r\n }", ""]);
+exports.push([module.i, ".NavigationItem {\r\n    margin: 10px 0;\r\n    box-sizing: border-box;\r\n    display: block;\r\n    width: 100%;\r\n}\r\n\r\n.NavigationItem a {\r\n    color: #8f5c2c;\r\n    text-decoration: none;\r\n    width: 100%;\r\n    box-sizing: border-box;\r\n    display: block;\r\n}\r\n\r\n.NavigationItem a:hover,\r\n.NavigationItem a:active,\r\n.NavigationItem a.active {\r\n    color: #40a4c8;\r\n}\r\n\r\n@media (min-width: 500px) {\r\n    .NavigationItem {\r\n        margin: 0;\r\n        display: flex;\r\n        height: 100%;\r\n        width: auto;\r\n        align-items: center;\r\n    }\r\n\r\n    .NavigationItem a {\r\n        color: white;\r\n        height: 100%;\r\n        padding: 16px 10px;\r\n        border-bottom: 4px solid transparent;\r\n    }\r\n\r\n    .NavigationItem a:hover,\r\n    .NavigationItem a:active,\r\n    .NavigationItem a.active {\r\n        background-color: #8f5c2c;\r\n        border-bottom: 4px solid #40a4c8;\r\n        color: white;\r\n    }\r\n}\r\n", ""]);
 
 // exports
 
@@ -6344,7 +6344,26 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../node_module
 
 
 // module
-exports.push([module.i, ".NavigtionItems{\r\n    margin: 0;\r\n    padding: 0;\r\n    list-style: none;\r\n    display: flex;\r\n    align-items: center;\r\n    height: 100%;\r\n}", ""]);
+exports.push([module.i, ".NavigationItems {\r\n    margin: 0;\r\n    padding: 0;\r\n    list-style: none;\r\n    display: flex;\r\n    flex-flow: column;\r\n    align-items: center;\r\n    height: 100%;\r\n}\r\n\r\n@media (min-width: 500px) {\r\n    .NavigationItems {\r\n        flex-flow: row;\r\n    }\r\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/components/Navigation/SideDrawer/SideDrawer.css":
+/*!*****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/components/Navigation/SideDrawer/SideDrawer.css ***!
+  \*****************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".SideDrawer {\n    position: fixed;\n    width: 280px;\n    max-width: 70%;\n    height: 100%;\n    left: 0;\n    top: 0;\n    z-index: 200;\n    background-color: white;\n    padding: 32px 16px;\n    box-sizing: border-box;\n    transition: -webkit-transform 0.3s ease-out;\n    transition: transform 0.3s ease-out;\n    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;\n}\n@media (min-width: 500px) {\n    .SideDrawer {\n        display: none;\n    }\n}\n\n.Open {\n    -webkit-transform: translateX(0);\n            transform: translateX(0);\n}\n\n.Close {\n    -webkit-transform: translateX(-100%);\n            transform: translateX(-100%);\n}\n", ""]);
 
 // exports
 
@@ -6363,7 +6382,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../node_module
 
 
 // module
-exports.push([module.i, ".Toolbar{\r\n    height: 56px;\r\n    width: 100%;\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    background-color: #703B09;\r\n    display: flex;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n    padding: 0 20px;\r\n    box-sizing:  border-box;\r\n    z-index: 90;\r\n}\r\n\r\n.Toolbar nav{\r\n    height: 100%;\r\n}", ""]);
+exports.push([module.i, ".Toolbar {\r\n    height: 56px;\r\n    width: 100%;\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    background-color: #703b09;\r\n    display: flex;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n    padding: 0 20px;\r\n    box-sizing: border-box;\r\n    z-index: 90;\r\n}\r\n\r\n.Toolbar nav {\r\n    height: 100%;\r\n}\r\n\r\n.Logo {\r\n    height: 80%;\r\n}\r\n\r\n@media (max-width: 499px) {\r\n    .DesktopOnly {\r\n        display: none;\r\n    }\r\n}\r\n", ""]);
 
 // exports
 
@@ -63577,13 +63596,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Layout_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Layout.css */ "./resources/js/components/components/Layout/Layout.css");
 /* harmony import */ var _Layout_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_Layout_css__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _Navigation_Toolbar_Toolbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Navigation/Toolbar/Toolbar */ "./resources/js/components/components/Navigation/Toolbar/Toolbar.js");
+/* harmony import */ var _Navigation_SideDrawer_SideDrawer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Navigation/SideDrawer/SideDrawer */ "./resources/js/components/components/Navigation/SideDrawer/SideDrawer.js");
+
 
 
 
 
 
 var Layout = function Layout(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Hoc_Aux1__WEBPACK_IMPORTED_MODULE_1__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Navigation_Toolbar_Toolbar__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Hoc_Aux1__WEBPACK_IMPORTED_MODULE_1__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Navigation_Toolbar_Toolbar__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Navigation_SideDrawer_SideDrawer__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", {
     className: "Content"
   }, props.children));
 };
@@ -63773,6 +63794,66 @@ var NavigationItems = function NavigationItems() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (NavigationItems);
+
+/***/ }),
+
+/***/ "./resources/js/components/components/Navigation/SideDrawer/SideDrawer.css":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/components/components/Navigation/SideDrawer/SideDrawer.css ***!
+  \*********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../../node_modules/css-loader??ref--6-1!../../../../../../node_modules/postcss-loader/src??ref--6-2!./SideDrawer.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/components/Navigation/SideDrawer/SideDrawer.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/components/Navigation/SideDrawer/SideDrawer.js":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/components/Navigation/SideDrawer/SideDrawer.js ***!
+  \********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Logo_Logo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Logo/Logo */ "./resources/js/components/components/Logo/Logo.js");
+/* harmony import */ var _NavigationItems_NavigationItems__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../NavigationItems/NavigationItems */ "./resources/js/components/components/Navigation/NavigationItems/NavigationItems.js");
+/* harmony import */ var _SideDrawer_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./SideDrawer.css */ "./resources/js/components/components/Navigation/SideDrawer/SideDrawer.css");
+/* harmony import */ var _SideDrawer_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_SideDrawer_css__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+
+var SideDrawer = function SideDrawer() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "SideDrawer"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Logo_Logo__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NavigationItems_NavigationItems__WEBPACK_IMPORTED_MODULE_2__["default"], null)));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (SideDrawer);
 
 /***/ }),
 
