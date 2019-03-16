@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 
-import burgerLogo from '../../assets/images/burger-logo.png';
-import './Logo.css';
+import burgerLogo from "../../assets/images/burger-logo.png";
+import "./Logo.css";
 
 const Logo = () => {
-    return ( 
+    return (
         <div className="Logo">
-            <img src={burgerLogo}  alt="MyBurger"/>
+            <img src={burgerLogo} alt="MyBurger" />
         </div>
-     );
-}
- 
+    );
+};
+
 export default Logo;

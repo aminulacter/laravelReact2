@@ -6306,7 +6306,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".Logo{\r\n    background-color: white;\r\n    padding: 8px;\r\n    height: 80%;\r\n    box-sizing: border-box;\r\n    border-radius: 5px;\r\n}\r\n\r\n.Logo img{\r\n    height: 100%;\r\n}", ""]);
+exports.push([module.i, ".Logo {\r\n    background-color: white;\r\n    padding: 8px;\r\n    height: 100%;\r\n    box-sizing: border-box;\r\n    border-radius: 5px;\r\n}\r\n\r\n.Logo img {\r\n    height: 100%;\r\n}\r\n", ""]);
 
 // exports
 
@@ -6363,7 +6363,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../node_module
 
 
 // module
-exports.push([module.i, ".SideDrawer {\n    position: fixed;\n    width: 280px;\n    max-width: 70%;\n    height: 100%;\n    left: 0;\n    top: 0;\n    z-index: 200;\n    background-color: white;\n    padding: 32px 16px;\n    box-sizing: border-box;\n    transition: -webkit-transform 0.3s ease-out;\n    transition: transform 0.3s ease-out;\n    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;\n}\n@media (min-width: 500px) {\n    .SideDrawer {\n        display: none;\n    }\n}\n\n.Open {\n    -webkit-transform: translateX(0);\n            transform: translateX(0);\n}\n\n.Close {\n    -webkit-transform: translateX(-100%);\n            transform: translateX(-100%);\n}\n", ""]);
+exports.push([module.i, ".SideDrawer {\n    position: fixed;\n    width: 280px;\n    max-width: 70%;\n    height: 100%;\n    left: 0;\n    top: 0;\n    z-index: 200;\n    background-color: white;\n    padding: 32px 16px;\n    box-sizing: border-box;\n    transition: -webkit-transform 0.3s ease-out;\n    transition: transform 0.3s ease-out;\n    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;\n}\n@media (min-width: 500px) {\n    .SideDrawer {\n        display: none;\n    }\n}\n\n.Open {\n    -webkit-transform: translateX(0);\n            transform: translateX(0);\n}\n\n.Close {\n    -webkit-transform: translateX(-100%);\n            transform: translateX(-100%);\n}\n.Logo1 {\n    height: 11%;\n}\n", ""]);
 
 // exports
 
@@ -6382,7 +6382,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../node_module
 
 
 // module
-exports.push([module.i, ".Toolbar {\r\n    height: 56px;\r\n    width: 100%;\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    background-color: #703b09;\r\n    display: flex;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n    padding: 0 20px;\r\n    box-sizing: border-box;\r\n    z-index: 90;\r\n}\r\n\r\n.Toolbar nav {\r\n    height: 100%;\r\n}\r\n\r\n.Logo {\r\n    height: 80%;\r\n}\r\n\r\n@media (max-width: 499px) {\r\n    .DesktopOnly {\r\n        display: none;\r\n    }\r\n}\r\n", ""]);
+exports.push([module.i, ".Toolbar {\r\n    height: 56px;\r\n    width: 100%;\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    background-color: #703b09;\r\n    display: flex;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n    padding: 0 20px;\r\n    box-sizing: border-box;\r\n    z-index: 90;\r\n}\r\n\r\n.Toolbar nav {\r\n    height: 100%;\r\n}\r\n\r\n.Logo2 {\r\n    height: 80%;\r\n}\r\n\r\n@media (max-width: 499px) {\r\n    .DesktopOnly {\r\n        display: none;\r\n    }\r\n}\r\n", ""]);
 
 // exports
 
@@ -63850,7 +63850,9 @@ __webpack_require__.r(__webpack_exports__);
 var SideDrawer = function SideDrawer() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "SideDrawer"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Logo_Logo__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NavigationItems_NavigationItems__WEBPACK_IMPORTED_MODULE_2__["default"], null)));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "Logo1"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Logo_Logo__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NavigationItems_NavigationItems__WEBPACK_IMPORTED_MODULE_2__["default"], null)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (SideDrawer);
@@ -63910,7 +63912,9 @@ __webpack_require__.r(__webpack_exports__);
 var Toolbar = function Toolbar(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
     className: "Toolbar"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "MENU"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Logo_Logo__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NavigationItems_NavigationItems__WEBPACK_IMPORTED_MODULE_3__["default"], null)));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "MENU"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "Logo2"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Logo_Logo__WEBPACK_IMPORTED_MODULE_2__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NavigationItems_NavigationItems__WEBPACK_IMPORTED_MODULE_3__["default"], null)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Toolbar);
