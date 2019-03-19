@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import Layout from "./components/Layout/Layout";
+
 import BurgerBuilder from "./containers/BurgerBuilder/BurgerBuilder";
+import Layout from "./Hoc/Layout/Layout";
 class App extends Component {
     constructor() {
         super();
@@ -18,4 +19,3 @@ class App extends Component {
 }
 
 export default App;
-
